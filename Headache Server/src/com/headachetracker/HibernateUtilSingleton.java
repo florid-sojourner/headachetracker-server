@@ -16,7 +16,7 @@ public class HibernateUtilSingleton {
 
 		configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 		configuration.setProperty("hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
-		configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/syptomtracker");
+		configuration.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:3306/headachetracker");
 		configuration.setProperty("hibernate.connection.username", "hibernate");
 		configuration.setProperty("hibernate.connection.password", "cangetin");
 
