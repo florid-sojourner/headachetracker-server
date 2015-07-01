@@ -4,23 +4,22 @@ import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
 
-//test the github
 
 public class HandlerTest {
 
 	public static void main (String[] args) {
-		
-		HeadacheDataHandler headacheDataHandler = new HeadacheDataHandler();
+		// test comment, can discard
+		SymptomModel headacheDataHandler = new SymptomModel();
 		
 		// create a timestamp to pass into the database 
 		Calendar calendar = Calendar.getInstance(); 
-		java.util.Date currentDate = calendar.getTime();
+		java.util.Date currentTime = calendar.getTime();
 		
 		// insert the timestamp
-		headacheDataHandler.insertTime(currentDate);
+		headacheDataHandler.insertHeadacheAtTime(currentTime);
 		
 		// get a list of all timestamps from the database
-		List<Headache> headacheList = headacheDataHandler.selectTimes();
+		List<Headache> headacheList = headacheDataHandler.selectHeadaches();
 		System.out.println("Headaches Count: " + headacheList.size());
 		
 		Iterator<Headache> iterator = headacheList.iterator();

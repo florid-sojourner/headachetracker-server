@@ -11,14 +11,14 @@ import org.hibernate.Query;
 
 import com.headachetracker.Headache;
 
-public class HeadacheDataHandler {
+public class SymptomModel {
 	private List<Headache> headaches;
 	
-	public HeadacheDataHandler() {
+	public SymptomModel() {
 		
 	}
 	
-	void insertTime(Date time) {
+	public void insertHeadacheAtTime(Date time) {
 		
 		Session session = HibernateUtilSingleton.getSessionFactory().getCurrentSession();
         Transaction transaction = session.beginTransaction();
@@ -32,7 +32,7 @@ public class HeadacheDataHandler {
         System.out.println("New headache ID is: " + newHeadache.getId());
 	}
 	
-	List<Headache> selectTimes() {
+	public List<Headache> selectHeadaches() {
 		
 		Session session = HibernateUtilSingleton.getSessionFactory().getCurrentSession();
         Transaction transaction = session.beginTransaction();
